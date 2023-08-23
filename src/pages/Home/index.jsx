@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import MyNavLink from "../../MyNavLink";
-import { Routes, Route, Navigate } from "react-router-dom";
-import News from "./News";
-import Message from "./Message";
+import { Outlet } from "react-router-dom";
 
 export default class Home extends Component {
   render() {
-    console.log("Home receive props", this.props.history);
-
     return (
       <div>
         <h3>Home</h3>
@@ -20,12 +16,9 @@ export default class Home extends Component {
               <MyNavLink to="message">Message</MyNavLink>
             </li>
           </ul>
+          <br />
         </div>
-        <Routes>
-          <Route path="news" element={<News />} />
-          <Route path="message" element={<Message />} />
-          <Route path="/*" element={<Navigate replace to="news" />} />
-        </Routes>
+        <Outlet />
       </div>
     );
   }
