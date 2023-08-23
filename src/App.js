@@ -26,6 +26,7 @@ export default class App extends Component {
               <div className="panel-body">
                 {/* Register Routes */}
                 <Routes>
+                  {/* If not necessary, do not use "exact" keyword in React. */}
                   <Route extact path="/home" element={<Home />} />
                   <Route extact path="/about" element={<About />} />
                 </Routes>
