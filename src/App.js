@@ -27,7 +27,7 @@ export default class App extends Component {
                 {/* Register Routes */}
                 <Routes>
                   {/* If not necessary, do not use "exact" keyword in React. */}
-                  <Route path="/home" element={<Home />} />
+                  <Route path="/home/*" element={<Home />} />
                   <Route path="/about" element={<About />} />
                   {/* *Redirect* */}
                   <Route path="/" element={<Navigate replace to="/home" />} />
