@@ -26,8 +26,8 @@ export default class App extends Component {
               <div className="panel-body">
                 {/* Register Routes */}
                 <Routes>
-                  <Route path="/home" element={<Home />} />
-                  <Route path="/about" element={<About />} />
+                  <Route extact path="/home" element={<Home />} />
+                  <Route extact path="/about" element={<About />} />
                 </Routes>
               </div>
             </div>
