@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Link, Route, Routes } from "react-router-dom";
-import Detail from "./Detail";
+import { Link, Outlet } from "react-router-dom";
 
 export default class Message extends Component {
   state = {
@@ -27,9 +26,7 @@ export default class Message extends Component {
           })}
         </ul>
         <hr />
-        <Routes>
-          <Route path="detail/:id/:title" element={<Detail />} />
-        </Routes>
+        <Outlet />
       </div>
     );
   }
