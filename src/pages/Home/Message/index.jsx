@@ -25,6 +25,7 @@ export default class Message extends Component {
                   //Use `useLocation` to pass data.
                   to={"detail"}
                   state={{ id: msgObj.id, title: msgObj.title }}
+                  replace //Instead of going back, replace the browser history route.
                 >
                   {msgObj.title}
                 </Link>
