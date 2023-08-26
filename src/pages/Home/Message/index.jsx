@@ -19,12 +19,11 @@ export default class Message extends Component {
             return (
               <li key={msgObj.id}>
                 <Link
-                  //Use `useParams` to pass data.
-                  // to={`detail/${msgObj.id}/${msgObj.title}`}
-
-                  //Use `useLocation` to pass data.
-                  to={"detail"}
-                  state={{ id: msgObj.id, title: msgObj.title }}
+                  ///Use `useParams` to pass data.
+                  to={`detail/${msgObj.id}/${msgObj.title}`}
+                  ///Use `useLocation` to pass data.
+                  // to={"detail"}
+                  // state={{ id: msgObj.id, title: msgObj.title }}
                   replace //Instead of going back, replace the browser history route.
                 >
                   {msgObj.title}

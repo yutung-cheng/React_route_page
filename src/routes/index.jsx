@@ -14,7 +14,12 @@ const routes = [
       {
         path: "message/*",
         element: <Message />,
-        children: [{ path: "detail", element: <Detail /> }],
+        children: [
+          ///Use Params to receive data
+          { path: "detail/:id/:title", element: <Detail /> },
+          ///Use Location to receive data
+          { path: "detail", element: <Detail /> },
+        ],
       },
       {
         path: "*",
