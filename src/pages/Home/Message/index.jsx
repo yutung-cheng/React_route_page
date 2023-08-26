@@ -18,7 +18,14 @@ export default class Message extends Component {
             //...
             return (
               <li key={msgObj.id}>
-                <Link to={`detail/${msgObj.id}/${msgObj.title}`}>
+                <Link
+                  //Use `useParams` to pass data.
+                  // to={`detail/${msgObj.id}/${msgObj.title}`}
+
+                  //Use `useLocation` to pass data.
+                  to={"detail"}
+                  state={{ id: msgObj.id, title: msgObj.title }}
+                >
                   {msgObj.title}
                 </Link>
               </li>

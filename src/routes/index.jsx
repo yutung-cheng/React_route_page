@@ -14,7 +14,7 @@ const routes = [
       {
         path: "message/*",
         element: <Message />,
-        children: [{ path: "detail/:id/:title", element: <Detail /> }],
+        children: [{ path: "detail", element: <Detail /> }],
       },
       {
         path: "*",
