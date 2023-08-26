@@ -1,5 +1,6 @@
 import React from "react";
-import { useParams, useLocation } from "react-router-dom";
+// import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const detailData = [
   { id: "01", content: "Hello World 1" },
@@ -15,11 +16,9 @@ export default function Detail() {
 
   //Use location to get data
   const location = useLocation();
-  const {
-    state: { id, title },
-  } = location;
+  const { id, title } = location.state || {};
 
-  const findDetailsData = detailData.find((obj) => obj.id === id);
+  const findDetailsData = detailData.find((obj) => obj.id === id) || {};
 
   return (
     <div>
